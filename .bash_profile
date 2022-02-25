@@ -12,6 +12,6 @@ PATH=$PATH:$HOME/.local/bin:$HOME/bin
 export PATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-source /home/sskalnik/.rvm/scripts/rvm
+source /home/jdrake/.rvm/scripts/rvm
 
 export SSH_AUTH_SOCK=$HOME/.ssh/ssh_auth_sock
