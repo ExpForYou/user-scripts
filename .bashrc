@@ -21,7 +21,7 @@ shopt -s checkwinsize
 
 force_color_prompt=yes
 
-# [sskalnik@ip-172-31-39-86:/tmp]$
+# [jdrake@ip-172-31-39-86:/tmp]$
 export PS1="\[\e[32m\][\[\e[m\]\[\e[36m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[35m\]\h\[\e[m\]:\[\e[1;34m\]\w\[\e[m\]\[\e[32m\]]\[\e[m\]\[\e[32m\]\\$\[\e[m\] "
 
 # enable color support of ls and also add handy aliases
