@@ -11,7 +11,7 @@ users:
     sudo: [ "ALL=(ALL) NOPASSWD:ALL" ]
     shell: /bin/bash
     ssh-authorized-keys: 
-    - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCJ9UcEAomb1tQqV6Xz+pcRvRxpsM/BTu47aWJOSD3P6gqGe0oHjolq2zGI6z1+hOe1N1YY/9Whd40JghsFDYIcZiP0F84RXH2jlC9LNCbXrxwhPtSEsWx8zLiGCd6egQbFnSnaNct8YHiRAKYoSreSIY/t1jzElsvqe1UKPnpsmVT9R4mhE1ljic87qqaZZPo3o/p8O1X3WMBwnUcGNqKqpEBIm+IUFZcQKh3N94mM/WBH34/m3CdlTcu5/xe1lSetVi9IpDQ6+n5OYRbH4LczubtoxSTvETL89VigS3aqx7sDPsIO7xh+C9bMMrvZee82ASdCMCZXYvJlxdwIJcI9 devbox
+    - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCl9Asv0dFsUzX6nSrXOoN5qLRzV/nZVPDlnei88tZX/Fc00yd82/OSrEkMsJIrNqtA+TapB2fIxLflFuj5BfEFArNMpcPwxYPIn+cP1ES7lpRSxKAjBehkXu8TGSzlRt38pqBtJZYUIUcd8cwvPXF+KgEAhh1OjjsRYdZKRZ9ubo2vUIvgR6wRQmGxR857GQVHN4RuMw2fU2mJMFI7xLJ8bt0m+NZzrcX8CkMQw7sXLfF8nnNWGF017ZFXEm/mRBE/9biFAmYKQUvvR1+d1HCpTEVzXItzkPEg39zaHoGBUwZaBWdNsUwymeKbRO7BAx2Rb6VqCyvxJHtRoYwAQE4J rsa-key-20220225 devbox
 repo_update: true
 repo_upgrade: all
 packages:
