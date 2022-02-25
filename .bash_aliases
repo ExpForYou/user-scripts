@@ -40,7 +40,7 @@ alias gall='git fetch --all'
 alias geads='git log --oneline --decorate --all --graph --color --simplify-by-decoration'
 alias branches='git branch -vv'
 alias gainline='git co mainline && git pull && git co -'
-alias mygit='git config user.name "Shelby Skalnik" && git config user.email "sskalnik@sskalnik.com"'
+alias mygit='git config user.name "Josh Drake" && git config user.email "jryandrake@gmail.com"'
 alias guke='git reset --hard && git clean -df'
 alias gamend='git add -A && git commit --amend'
 # Onica / Rackspace
