@@ -111,42 +111,6 @@ runcmd:
   - (cd /tmp && git clone https://github.com/tmux/tmux.git && cd ./tmux && dos2unix ./* && sh autogen.sh && ./configure && make && make install)
   - su jdrake -c 'git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm'
 write_files:
-  - path: /home/jdrake/.ssh/config
-    owner: jdrake:jdrake
-    permissions: 0600
-    content: |
-      Host github.com
-        Hostname github.com
-        IdentityFile ~/.ssh/onica_bitbucket
-        User git
-        IdentitiesOnly yes
-        Port 22
-
-      Host bitbucket.org
-        Hostname bitbucket.org
-        IdentityFile ~/.ssh/onica_bitbucket
-        User git
-        IdentitiesOnly yes
-        Port 22
-        
-      Host gitlab.com
-        Hostname gitlab.com
-        IdentityFile ~/.ssh/onica_bitbucket
-        User git
-        IdentitiesOnly yes
-        Port 22
-
-      Host visualstudio.com
-        IdentityFile ~/.ssh/onica_bitbucket
-        IdentitiesOnly yes
-
-      Host ssh.dev.azure.com
-        IdentityFile ~/.ssh/onica_bitbucket
-        IdentitiesOnly yes
-
-      Host *
-        ForwardAgent no
-        IdentitiesOnly yes
   - path: /home/jdrake/.ssh/rc
     owner: jdrake:jdrake
     permissions: 0600
@@ -199,8 +163,8 @@ write_files:
     permissions: 0600
     content: |
       [user]
-        name = Shelby Skalnik
-        email = jdrake@rackspace.com
+        name = Joshua Drake
+        email = jrdrake13@gmail.com
       [core]
         autocrlf = true
         safecrlf = false
