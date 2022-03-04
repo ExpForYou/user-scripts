@@ -111,6 +111,16 @@ runcmd:
   - (cd /tmp && git clone https://github.com/tmux/tmux.git && cd ./tmux && dos2unix ./* && sh autogen.sh && ./configure && make && make install)
   - su jdrake -c 'git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm'
 write_files:
+   - path: /home/sskalnik/.ssh/config
+    owner: jdrake:jdrake
+    permissions: 0600
+    content: |
+      Host github.com
+        Hostname github.com
+        IdentityFile ~/.ssh/ExpForYou_github
+        User git
+        IdentitiesOnly yes
+        Port 22
   - path: /home/jdrake/.ssh/rc
     owner: jdrake:jdrake
     permissions: 0600
