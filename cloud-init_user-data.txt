@@ -93,7 +93,7 @@ runcmd:
   - yum install -y sl
 # Install Terraform and download updater script
   - mkdir /home/jdrake/bin
-  - wget https://raw.githubusercontent.com/jdrake/tf-updater/master/get-latest-terraform.sh -O /home/jdrake/bin/get-latest-terraform.sh
+  - wget https://raw.githubusercontent.com/ExpForYou/tf-updater/master/get-latest-terraform.sh -O /home/jdrake/bin/get-latest-terraform.sh
   - chmod +x /home/jdrake/bin/get-latest-terraform.sh
   - /home/jdrake/bin/get-latest-terraform.sh
 # https://github.com/tfsec/tfsec
@@ -111,7 +111,7 @@ runcmd:
   - (cd /tmp && git clone https://github.com/tmux/tmux.git && cd ./tmux && dos2unix ./* && sh autogen.sh && ./configure && make && make install)
   - su jdrake -c 'git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm'
 write_files:
-   - path: /home/sskalnik/.ssh/config
+   - path: /home/jdrake/.ssh/config
     owner: jdrake:jdrake
     permissions: 0600
     content: |
