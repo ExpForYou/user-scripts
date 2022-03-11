@@ -111,7 +111,7 @@ runcmd:
   - (cd /tmp && git clone https://github.com/tmux/tmux.git && cd ./tmux && dos2unix ./* && sh autogen.sh && ./configure && make && make install)
   - su jdrake -c 'git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm'
 write_files:
-   - path: /home/jdrake/.ssh/config
+  - path: /home/jdrake/.ssh/config
     owner: jdrake:jdrake
     permissions: 0600
     content: |
