@@ -65,8 +65,8 @@ runcmd:
 # Take control of $HOME
   - chown jdrake:jdrake /home/jdrake/ -R
 # Allow 666 through iptables firewall
-  - iptables -A IN_public_allow -p tcp -m tcp --dport 666 -m conntrack --ctstate NEW -j ACCEPT
-  - iptables -A INPUT -p tcp -m tcp --dport 666 -m conntrack --ctstate NEW -j ACCEPT
+#  - iptables -A IN_public_allow -p tcp -m tcp --dport 666 -m conntrack --ctstate NEW -j ACCEPT
+#  - iptables -A INPUT -p tcp -m tcp --dport 666 -m conntrack --ctstate NEW -j ACCEPT
 # Python 3.9.1
 # Compiling from source can take a long time on a small instance!
   - (cd /opt && wget https://www.python.org/ftp/python/3.9.1/Python-3.9.1.tgz && tar xzf Python-3.9.1.tgz && cd Python-3.9.1 && ./configure --enable-optimizations && make && make altinstall && rm -f /opt/Python-3.9.1.tgz)
