@@ -11,7 +11,7 @@ users:
     sudo: [ "ALL=(ALL) NOPASSWD:ALL" ]
     shell: /bin/bash
     ssh-authorized-keys: 
-    - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCW1EH9lS5gFnITiYbR4Q5SkgTsHbVxdTi0IyX48Bj2P9N++x7FlPUqNqYw96UyH2FBI6CRWnKGh0SkGJ6kc0MkeBCNTbMGBI+PQCAeFWSXAZrQOp8o/M+gpEr+yyAkHvIeHnZpOoQWOU758tvJvDmtMjwaTc7/t6U5seuKrd7lD0qA/zkSXCx454nSBWCmvt45oP9tyawiqL8TdJrx/32Dhht1eGdxnwWBWcojcRftWbn0ySxuh/0sfeP6mji/wOvVOPKsNB2IwXAADt3f9BP6yNLDwECrCSgMxlunI4l8NaaXFsdKj2UZBRJp2GIEaMnYeThRIQYDw3XWyTPo/TeT triumphconfigkey
+    - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCl9Asv0dFsUzX6nSrXOoN5qLRzV/nZVPDlnei88tZX/Fc00yd82/OSrEkMsJIrNqtA+TapB2fIxLflFuj5BfEFArNMpcPwxYPIn+cP1ES7lpRSxKAjBehkXu8TGSzlRt38pqBtJZYUIUcd8cwvPXF+KgEAhh1OjjsRYdZKRZ9ubo2vUIvgR6wRQmGxR857GQVHN4RuMw2fU2mJMFI7xLJ8bt0m+NZzrcX8CkMQw7sXLfF8nnNWGF017ZFXEm/mRBE/9biFAmYKQUvvR1+d1HCpTEVzXItzkPEg39zaHoGBUwZaBWdNsUwymeKbRO7BAx2Rb6VqCyvxJHtRoYwAQE4J
 repo_update: true
 repo_upgrade: all
 packages:
