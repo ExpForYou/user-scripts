@@ -10,8 +10,8 @@ users:
     groups: [ wheel ]
     sudo: [ "ALL=(ALL) NOPASSWD:ALL" ]
     shell: /bin/bash
-    ssh-authorized-keys: 
-    - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCihRirPfJhTReOPBEqZQCcHESOyMd7dIb529Uc13hrB63yL97AlAJo3QBBkqda9RsVpgBHHw8it0xYL7VgfVaZGAYkYVx5rM3wF/IaiNxZob4sVcP530IamDxNEG2kM+gMb22KawGh8pgH4US8goShH2j5z5UtRU3OSTBZcfsHmvRBCJWyxqhOyhwa2ahP+JBN6krOQB4NjaDULL4F38C161MJ76U5r6SlwXO7DSt8Kks1jXXlAFa9SPaNfvD53GQjnGMh3tCuBrXVkBGH8IzmQNDW03DNH5j9IPWuuIqYoC1zOJJH0l7h+N8f6BgwvLoaFG/+h06H6wZrpLvHRHD3 newmasterkey
+#    ssh-authorized-keys: 
+#    - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCihRirPfJhTReOPBEqZQCcHESOyMd7dIb529Uc13hrB63yL97AlAJo3QBBkqda9RsVpgBHHw8it0xYL7VgfVaZGAYkYVx5rM3wF/IaiNxZob4sVcP530IamDxNEG2kM+gMb22KawGh8pgH4US8goShH2j5z5UtRU3OSTBZcfsHmvRBCJWyxqhOyhwa2ahP+JBN6krOQB4NjaDULL4F38C161MJ76U5r6SlwXO7DSt8Kks1jXXlAFa9SPaNfvD53GQjnGMh3tCuBrXVkBGH8IzmQNDW03DNH5j9IPWuuIqYoC1zOJJH0l7h+N8f6BgwvLoaFG/+h06H6wZrpLvHRHD3 newmasterkey
 repo_update: true
 repo_upgrade: all
 packages:
@@ -50,15 +50,15 @@ runcmd:
   - su jdrake -c 'nvm install-latest-npm'
   - su jdrake -c 'npm i --save-dev eslint'
 # Lock down SSH: non-standard port 666, no root login, no password login, etc.; SSH2 using key-based auth only!
-  - [ sh, -c, echo, '# Added by cloud-init user-data:', '>>', '/etc/ssh/sshd_config' ]
-  - grep -q '^Port' /etc/ssh/sshd_config && sed -i 's/^Port.*/Port 666/' /etc/ssh/sshd_config || echo 'Port 666' >> /etc/ssh/sshd_config
-  - grep -q '^UsePAM' /etc/ssh/sshd_config && sed -i 's/^UsePAM.*/UsePAM yes/' /etc/ssh/sshd_config || echo 'UsePAM yes' >> /etc/ssh/sshd_config
-  - grep -q '^Protocol' /etc/ssh/sshd_config && sed -i 's/^Protocol.*/Protocol 2/' /etc/ssh/sshd_config || echo 'Protocol 2' >> /etc/ssh/sshd_config
-  - grep -q '^PrintMotd' /etc/ssh/sshd_config && sed -i 's/^PrintMotd.*/PrintMotd no/' /etc/ssh/sshd_config || echo 'PrintMotd no' >> /etc/ssh/sshd_config
-  - grep -q '^PermitRootLogin' /etc/ssh/sshd_config && sed -i 's/^PermitRootLogin.*/PermitRootLogin no/' /etc/ssh/sshd_config || echo 'PermitRootLogin no' >> /etc/ssh/sshd_config
-  - grep -q '^AllowUsers' /etc/ssh/sshd_config && sed -i 's/^AllowUsers.*/AllowUsers jdrake ec2-user/' /etc/ssh/sshd_config || echo 'AllowUsers jdrake ec2-user' >> /etc/ssh/sshd_config
-  - grep -q '^PasswordAuthentication' /etc/ssh/sshd_config && sed -i 's/^PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config || echo 'PasswordAuthentication no' >> /etc/ssh/sshd_config
-  - service sshd restart
+#  - [ sh, -c, echo, '# Added by cloud-init user-data:', '>>', '/etc/ssh/sshd_config' ]
+#  - grep -q '^Port' /etc/ssh/sshd_config && sed -i 's/^Port.*/Port 666/' /etc/ssh/sshd_config || echo 'Port 666' >> /etc/ssh/sshd_config
+#  - grep -q '^UsePAM' /etc/ssh/sshd_config && sed -i 's/^UsePAM.*/UsePAM yes/' /etc/ssh/sshd_config || echo 'UsePAM yes' >> /etc/ssh/sshd_config
+#  - grep -q '^Protocol' /etc/ssh/sshd_config && sed -i 's/^Protocol.*/Protocol 2/' /etc/ssh/sshd_config || echo 'Protocol 2' >> /etc/ssh/sshd_config
+#  - grep -q '^PrintMotd' /etc/ssh/sshd_config && sed -i 's/^PrintMotd.*/PrintMotd no/' /etc/ssh/sshd_config || echo 'PrintMotd no' >> /etc/ssh/sshd_config
+#  - grep -q '^PermitRootLogin' /etc/ssh/sshd_config && sed -i 's/^PermitRootLogin.*/PermitRootLogin no/' /etc/ssh/sshd_config || echo 'PermitRootLogin no' >> /etc/ssh/sshd_config
+#  - grep -q '^AllowUsers' /etc/ssh/sshd_config && sed -i 's/^AllowUsers.*/AllowUsers jdrake ec2-user/' /etc/ssh/sshd_config || echo 'AllowUsers jdrake ec2-user' >> /etc/ssh/sshd_config
+#  - grep -q '^PasswordAuthentication' /etc/ssh/sshd_config && sed -i 's/^PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config || echo 'PasswordAuthentication no' >> /etc/ssh/sshd_config
+#  - service sshd restart
 # Set permissions for SSH
   - chmod 700 /home/jdrake/.ssh
   - chmod 600 /home/jdrake/.ssh/authorized_keys
