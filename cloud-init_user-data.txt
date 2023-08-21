@@ -253,7 +253,7 @@ write_files:
       alias geads='git log --oneline --decorate --all --graph --color --simplify-by-decoration'
       alias branches='git branch -vv'
       alias gainline='git co mainline && git pull && git co -'
-      alias mygit='git config user.name "Shelby Skalnik" && git config user.email "jdrake@jdrake.com"'
+      alias mygit='git config user.name "EXPforYou" && git config user.email "jdrake13@gmail.com"'
       alias guke='git reset --hard && git clean -df'
       alias gamend='git add -A && git commit --amend'
   - path: /home/jdrake/.bashrc
